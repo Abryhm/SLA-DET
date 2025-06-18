@@ -252,29 +252,17 @@ class ComputeLoss:
         # # if similarity_loss_patch_2 !=  torch.zeros(1, device=self.device):
         # #    similarity_loss_patch_2=  similarity_loss_patch_2.unsqueeze(0)
         # #    mean_sim+=1
-        if epoch < 20 :
+        if epoch < 10 :
             similarity_loss_patch_3= self.similarity(feat,pseudo_targets_60_90, patch_targets,orignal_targets,1 )
             if similarity_loss_patch_3 !=  torch.zeros(1, device=self.device):
                 similarity_loss_patch_3=  similarity_loss_patch_3.unsqueeze(0)
                 mean_sim+=1
-            if mean_sim > 0:
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
-                
+            if mean_sim > 0: 
                 
                 similarity_loss_patch= (similarity_loss_patch_3)#+(similarity_loss_patch_3)/mean_sim
             else: 
                 similarity_loss_patch= (similarity_loss_patch_3)#+(similarity_loss_patch_3)
-        if epoch >= 20:
+        if epoch >= 10:
             similarity_loss_patch = torch.zeros(1, device=self.device)  # class loss
         # # similarity_loss_patch_4= self.similarity(feat,pseudo_targets_60_90, patch_targets,orignal_targets,2 )
         # # if similarity_loss_patch_4 !=  torch.zeros(1, device=self.device):
@@ -289,20 +277,9 @@ class ComputeLoss:
         
         # # i_class_all= self.loss_com_image(i_tcls, i_tbox, i_indices, i_anchors,p)
         
-        
-        
-        
-        
         # # kl_loss= ((self.compute_kl_loss(t_class_all,p_classes_path))*0.2) + epsilon
         
-        
-        
         #sim_loss
-        
-        
-        
-        
-        
         
         if len(pseudo_targets) > 0: 
             lbox= p_lbox + (f_lbox*0.1)
@@ -315,10 +292,6 @@ class ComputeLoss:
             lobj= p_lobj
             lcls= p_lcls+(similarity_loss_patch*0.1)#+kl_loss
         
-        if epoch == 29:
-            lbox= p_lbox
-            lobj= p_lobj
-            lcls= p_lcls
         # if similarity_loss_patch !=  torch.zeros(1, device=self.device):
         #    similarity_loss_patch=  similarity_loss_patch.unsqueeze(0)
         # return (kl_loss) * p_bs, torch.cat((kl_loss.unsqueeze(0),p_lobj, p_lcls)).detach()
