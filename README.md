@@ -5,9 +5,10 @@
 
 **Authors:** Abdul Rehman, Talha Meraj, Aiman Mahmood Minhas, Ayisha Imran, Mohsen Ali, Waqas Sultani, Mubarak Shah
 
-**MIA 2025**
+**Medical image analysis 106 (December, 2025, 103760)**
 
 **Paper:** [ArXiv](https://arxiv.org/abs/2405.)
+**Paper:** [Medical image analysis](https://www.sciencedirect.com/science/article/abs/pii/S1361841525003068)
 
 **Abstract:** _Leukemia is 10th most frequently diagnosed cancer and one of the leading causes of cancer-related deaths worldwide. Realistic analysis of Leukemia requires White Blook Cells (WBC) localization, classification, and morphological assessment. Despite deep learning advances in medical imaging, leukemia analysis lacks a large, diverse multi-task dataset, while existing small datasets lack domain diversity, limiting real-world applicability. To overcome dataset
 challenges, we present a large-scale WBC dataset named ‘Large Leukemia Dataset’ (LLD) and novel methods for detecting WBC with their attributes. Our contribution here is threefold. First, we present a large-scale Leukemia dataset collected through Peripheral Blood Films (PBF) from several patients, through multiple microscopes, multi-cameras, and multi-magnification. To enhance diagnosis explainability and medical expert acceptance, each leukemia cell is annotated at 100x with 7 morphological attributes, ranging from Cell Size to Nuclear Shape. Secondly, we propose a multi-task model that not only detects WBCs but also predicts their attributes, providing an interpretable and clinically meaningful solution. Third, we propose a method for WBC detection with attribute analysis using sparse annotations. This approach reduces the annotation burden on hematologists, requiring them to mark only a small area within the field of view. Our method enables the model to leverage the entire field of view rather than just the annotated regions, enhancing learning efficiency and diagnostic accuracy. From diagnosis explainability to overcoming domain-shift challenges, presented datasets could be used for many challenging aspects of microscopic image analysis._
@@ -116,3 +117,22 @@ python test.py \
  --save-csv,
  --imgsz,640
 ```
+# citation 
+@article{rehman2025leveraging,
+  title={Leveraging sparse annotations for leukemia diagnosis on the large leukemia dataset},
+  author={Rehman, Abdul and Meraj, Talha and Minhas, Aiman Mahmood and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas and Shah, Mubarak},
+  journal={Medical Image Analysis},
+  pages={103760},
+  year={2025},
+  publisher={Elsevier}
+}
+@inproceedings{rehman2024large,
+  title={A large-scale multi domain leukemia dataset for the white blood cells detection with morphological attributes for explainability},
+  author={Rehman, Abdul and Meraj, Talha and Minhas, Aiman Mahmood and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={553--563},
+  year={2024},
+  organization={Springer}
+}
+
+
