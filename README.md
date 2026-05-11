@@ -127,7 +127,6 @@ python test.py \
   year={2025},
   publisher={Elsevier}
 }
-```
 
 2:   @inproceedings{rehman2024large,
   title={A large-scale multi domain leukemia dataset for the white blood cells detection with morphological attributes for explainability},
