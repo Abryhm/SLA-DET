@@ -117,8 +117,9 @@ python test.py \
  --save-csv,
  --imgsz,640
 ```
-# citation 
-@article{rehman2025leveraging,
+# Citation 
+
+1:   @article{rehman2025leveraging,
   title={Leveraging sparse annotations for leukemia diagnosis on the large leukemia dataset},
   author={Rehman, Abdul and Meraj, Talha and Minhas, Aiman Mahmood and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas and Shah, Mubarak},
   journal={Medical Image Analysis},
@@ -126,7 +127,9 @@ python test.py \
   year={2025},
   publisher={Elsevier}
 }
-@inproceedings{rehman2024large,
+```
+
+2:   @inproceedings{rehman2024large,
   title={A large-scale multi domain leukemia dataset for the white blood cells detection with morphological attributes for explainability},
   author={Rehman, Abdul and Meraj, Talha and Minhas, Aiman Mahmood and Imran, Ayisha and Ali, Mohsen and Sultani, Waqas},
   booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
